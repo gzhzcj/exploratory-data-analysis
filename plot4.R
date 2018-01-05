@@ -40,12 +40,12 @@ png(filename = filename, width = 480, height = 480)
 par(mfrow=c(2,2))
 
 ## left-top
-hist(data$Global_active_power, col = "red", main = "Global Active Power",
-     xlab  = "")
+plot(data$Datetime, data$Global_active_power, type="l", 
+     xlab = "", ylab = "Global Active Power")
 
 ## right-top
-plot(data$Datetime, data$Global_active_power, type="l", 
-     xlab = "datetime", ylab = "Global Active Power(kilowatts)")
+plot(data$Datetime, data$Voltage, type="l", 
+     xlab = "datetime", ylab = "Voltage")
 
 ## left-bottom
 with(newdata, plot(x, y, type = "n", xlab = "", ylab = "Energy sub metering"))
